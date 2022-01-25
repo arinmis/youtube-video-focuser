@@ -1,0 +1,13 @@
+body {
+    width: 150px;
+    height: 80px;
+    padding: 0px 5px;
+    text-align: center;
+}
+
+.option { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

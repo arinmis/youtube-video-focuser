@@ -3,6 +3,8 @@ body {
     height: 80px;
     padding: 0px 5px;
     text-align: center;
+    background-color: #22272E;
+    color: #cdd9e5;
 }
 
 .option { 

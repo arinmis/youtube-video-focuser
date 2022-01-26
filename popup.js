@@ -1,8 +1,24 @@
 // Initialize button with user's preferred color
 const recomVideos = document.getElementById("recomVideos");
 const comments = document.getElementById("comments");
+console.log('popup.js is called');
 
-// listen recommend checkbox 
+
+// listen recommend checkbox
+window.addEventListener("load", async () => {
+  let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+  chrome.storage.sync.get(
+    ["isHiddenRecomVideos", "isHiddenComments"],
+    ({ isHiddenRecomVideos, isHiddenComments }) => {
+      recomVideos.checked = isHiddenRecomVideos
+      comments.checked = isHiddenComments
+    }
+  );
+
+});
+
+// listen recommend checkbox
 recomVideos.addEventListener("change", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -12,7 +28,9 @@ recomVideos.addEventListener("change", async () => {
   });
 });
 
-// listen recommend checkbox 
+
+
+// listen recommend checkbox
 comments.addEventListener("change", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -22,37 +40,42 @@ comments.addEventListener("change", async () => {
   });
 });
 
+
 /* hide recommendation element of youtube
  * current id is: 'secondary'
  * update it if it is deprecated
  */
 function hideRecomVideos() {
-  chrome.storage.sync.get(() => {
+  chrome.storage.sync.get("isHiddenRecomVideos", ({ isHiddenRecomVideos }) => {
     // block recommendations
-    if (document.getElementById('secondary').style.visibility !== 'hidden') { 
-      document.getElementById('secondary').style.visibility = 'hidden'
-      console.log("videos are hiding")
+    if (isHiddenRecomVideos) {
+      document.getElementById('secondary-inner').style.display = 'none'
     }
-    else 
-      document.getElementById('secondary').style.visibility = 'visible'
+    else {
+      document.getElementById('secondary-inner').style.display = 'block'
+    }
+    // update videos visibility data
+    chrome.storage.sync.set({"isHiddenRecomVideos": !isHiddenRecomVideos});
   });
+
 }
 
 
-
-/* 
- * hide recommendation element of youtube
+/*
+ * hide comments element of youtube
  * current id is: 'sections'
  * update it if it is deprecated
  */
 function hideComments() {
-  chrome.storage.sync.get(() => {
+  chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
     // block recommendations
-    if (document.getElementById('sections').style.visibility !== 'hidden') { 
-      document.getElementById('sections').style.visibility = 'hidden'
-      console.log("videos are hiding")
+    if (isHiddenComments) {
+      document.getElementById('sections').style.display = 'none'
     }
-    else 
-      document.getElementById('sections').style.visibility = 'visible'
+    else {
+      document.getElementById('sections').style.display = 'block'
+    }
+    // update comment visibility data
+    chrome.storage.sync.set({"isHiddenComments": !isHiddenComments});
   });
 }

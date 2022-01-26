@@ -19,5 +19,13 @@
         "32": "/images/icon-32.png",
         "64": "/images/icon-64.png",
         "128": "/images/icon-128.png"
-    }
+    },
+    "host_permissions": ["https://www.youtube.com/watch*"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/watch*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+    ]
 }

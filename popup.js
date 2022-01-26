@@ -47,15 +47,21 @@ comments.addEventListener("change", async () => {
  */
 function hideRecomVideos() {
   chrome.storage.sync.get("isHiddenRecomVideos", ({ isHiddenRecomVideos }) => {
+    // chage hide status
+    console.log("(before)video section status: " +  isHiddenRecomVideos);
+    isHiddenRecomVideos = !isHiddenRecomVideos
     // block recommendations
+    console.log("(after)video section status: " +  isHiddenRecomVideos);
     if (isHiddenRecomVideos) {
       document.getElementById('secondary-inner').style.display = 'none'
+      console.log('video is hiding');
     }
     else {
       document.getElementById('secondary-inner').style.display = 'block'
+      console.log('video is showing');
     }
     // update videos visibility data
-    chrome.storage.sync.set({"isHiddenRecomVideos": !isHiddenRecomVideos});
+    chrome.storage.sync.set({"isHiddenRecomVideos": isHiddenRecomVideos});
   });
 
 }
@@ -68,6 +74,8 @@ function hideRecomVideos() {
  */
 function hideComments() {
   chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
+    // change hide status
+    isHiddenComments = !isHiddenComments
     // block recommendations
     if (isHiddenComments) {
       document.getElementById('sections').style.display = 'none'
@@ -76,6 +84,6 @@ function hideComments() {
       document.getElementById('sections').style.display = 'block'
     }
     // update comment visibility data
-    chrome.storage.sync.set({"isHiddenComments": !isHiddenComments});
+    chrome.storage.sync.set({"isHiddenComments": isHiddenComments});
   });
 }

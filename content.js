@@ -13,15 +13,13 @@ window.onload = function() {
 function hideRecomVideos() {
   chrome.storage.sync.get("isHiddenRecomVideos", ({ isHiddenRecomVideos }) => {
     // block recommendations
-    console.log(isHiddenRecomVideos);
+    console.log("isHiddenRecomVideos: " + isHiddenRecomVideos);
     if (isHiddenRecomVideos) {
       document.getElementById('secondary-inner').style.display = 'none'
     }
     else {
       document.getElementById('secondary-inner').style.display = 'block'
     }
-    // update videos visibility data
-    chrome.storage.sync.set({"isHiddenRecomVideos": !isHiddenRecomVideos});
   });
 
 }
@@ -35,13 +33,12 @@ function hideRecomVideos() {
 function hideComments() {
   chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
     // block recommendations
+    console.log("isHiddenComments: " + isHiddenComments);
     if (isHiddenComments) {
       document.getElementById('sections').style.display = 'none'
     }
     else {
       document.getElementById('sections').style.display = 'block'
     }
-    // update comment visibility data
-    chrome.storage.sync.set({"isHiddenComments": !isHiddenComments});
   });
 }

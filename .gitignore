@@ -1,1 +1,2 @@
-*swp*
+# ignore swap files
+*.swp

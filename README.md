@@ -22,3 +22,4 @@ Nowadays YouTube became one of the biggest information source on the internet bu
 3. Activate Developer mode(with clicking toggle bar in the right most corner)
 4. Click 'Load unpacked' button
 5. Select the repo that is cloned in the first step  
+[see this tutorial video](https://www.youtube.com/watch?v=oswjtLwCUqg&ab_channel=SukeshK)

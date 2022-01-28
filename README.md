@@ -4,10 +4,11 @@ Nowadays YouTube became one of the biggest information source on the internet bu
 - Simple Interface
   <div align='center'>
  * ![hide-all](https://user-images.githubusercontent.com/56651041/151593273-e5261d9b-cc3a-4ef4-ab79-76e7e6b219bd.png)
-![interface](https://user-images.githubusercontent.com/56651041/151593278-7ba5c96e-d2bd-46e1-9ab3-763618ac9c30.png)
-![show-recom](https://user-images.githubusercontent.com/56651041/151593279-1ae1724f-7535-40bf-a4e5-710b5e2d5bc8.png)  
+ 
 </div>
  
+ ![interface](https://user-images.githubusercontent.com/56651041/151593278-7ba5c96e-d2bd-46e1-9ab3-763618ac9c30.png)
+![show-recom](https://user-images.githubusercontent.com/56651041/151593279-1ae1724f-7535-40bf-a4e5-710b5e2d5bc8.png) 
 
 #### Installation
 1. Clone this repo: ```git clone git@github.com:Arinmis/youtube-video-focuser.git ```

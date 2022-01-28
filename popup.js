@@ -48,10 +48,14 @@ comments.addEventListener("change", async () => {
 function hideRecomVideos() {
   chrome.storage.sync.get("isHiddenRecomVideos", ({ isHiddenRecomVideos }) => {
     // chage hide status
-    console.log("(before)video section status: " +  isHiddenRecomVideos);
+    console.log("here");
     isHiddenRecomVideos = !isHiddenRecomVideos
+    // update videos visibility data
+    chrome.storage.sync.set({"isHiddenRecomVideos": isHiddenRecomVideos});
+    // check if the url is correct 
+    if (!window.location.href.includes("youtube.com"))
+      return
     // block recommendations
-    console.log("(after)video section status: " +  isHiddenRecomVideos);
     if (isHiddenRecomVideos) {
       document.getElementById('secondary-inner').style.display = 'none'
       console.log('video is hiding');
@@ -60,8 +64,6 @@ function hideRecomVideos() {
       document.getElementById('secondary-inner').style.display = 'block'
       console.log('video is showing');
     }
-    // update videos visibility data
-    chrome.storage.sync.set({"isHiddenRecomVideos": isHiddenRecomVideos});
   });
 
 }
@@ -76,6 +78,11 @@ function hideComments() {
   chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
     // change hide status
     isHiddenComments = !isHiddenComments
+    // update comment visibility data
+    chrome.storage.sync.set({"isHiddenComments": isHiddenComments});
+    // check if the url is correct 
+    if (!window.location.href.includes("youtube.com"))
+      return
     // block recommendations
     if (isHiddenComments) {
       document.getElementById('sections').style.display = 'none'
@@ -83,7 +90,5 @@ function hideComments() {
     else {
       document.getElementById('sections').style.display = 'block'
     }
-    // update comment visibility data
-    chrome.storage.sync.set({"isHiddenComments": isHiddenComments});
   });
 }

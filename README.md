@@ -1,5 +1,5 @@
 ### About extension
-Nowadays YouTube became one of the biggest information source on the internet but at the same time one of the biggest distraction source. This extension allow you to just focus video content and ban the comments and recommendation sections. By this way, you directly get what you want from the YouTube instead of dealing with distracting comments and click-bait recommendations.
+Nowadays YouTube became one of the biggest information source on the internet but at the same time one of the biggest distraction source. This extension allow you to just focus video content and ban the comments and recommendation sections. By this way, you can directly get what you want from the YouTube instead of dealing with distracting comments and click-bait recommendations.
 
 #### Installation
 1. Clone this repo: ```git clone git@github.com:Arinmis/youtube-video-focuser.git ```

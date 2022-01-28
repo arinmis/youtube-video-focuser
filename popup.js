@@ -71,7 +71,7 @@ function hideRecomVideos() {
 
 /*
  * hide comments element of youtube
- * current id is: 'sections'
+ * current id is: 'comments'
  * update it if it is deprecated
  */
 function hideComments() {
@@ -87,11 +87,11 @@ function hideComments() {
     // block recommendations
     if (isHiddenComments) {
       console.log("comments are hiding")
-      document.getElementById('sections').style.display = 'none'
+      document.getElementById('comments').style.display = 'none'
     }
     else {
       console.log("comments are showing")
-      document.getElementById('sections').style.display = 'block'
+      document.getElementById('comments').style.display = 'block'
     }
   });
 }

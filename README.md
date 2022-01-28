@@ -1,7 +1,7 @@
 ### About extension
 Nowadays YouTube became one of the biggest information source on the internet but at the same time one of the biggest distraction source. This extension allow you to just focus video content and ban the comments and recommendation sections. By this way, you can directly get what you want from the YouTube instead of dealing with distracting comments and click-bait recommendations.
 
-- Minimlist Extension UI
+- Minimalist Extension UI
   <p align='center'>
     <img src="https://user-images.githubusercontent.com/56651041/151593278-7ba5c96e-d2bd-46e1-9ab3-763618ac9c30.png"/>
   </p>

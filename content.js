@@ -16,6 +16,7 @@ setInterval(() => {
   }
 
   try {
+    console.log('here');
     hideComments()
   }
   catch (e) {
@@ -52,15 +53,15 @@ function hideRecomVideos() {
  */
 function hideComments() {
   // check id'a are avaliable 
-  if (document.getElementById('sections').style.display == null)
+  if (document.getElementById('comments').style.display == null)
     throw `url ${window.location.href} doesn't contains related section`
   chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
     // block recommendations
     if (isHiddenComments) {
-      document.getElementById('sections').style.display = 'none'
+      document.getElementById('comments').style.display = 'none'
     }
     else {
-      document.getElementById('sections').style.display = 'block'
+      document.getElementById('comments').style.display = 'block'
     }
   });
 }

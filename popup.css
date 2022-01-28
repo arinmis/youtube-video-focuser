@@ -13,3 +13,7 @@ body {
     align-items: center;
 }
 
+input { 
+    width: 15px;
+    height : 15px;
+}

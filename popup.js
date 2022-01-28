@@ -81,13 +81,16 @@ function hideComments() {
     // update comment visibility data
     chrome.storage.sync.set({"isHiddenComments": isHiddenComments});
     // check if the url is correct 
+    console.log(isHiddenComments);
     if (!window.location.href.includes("youtube.com"))
       return
     // block recommendations
     if (isHiddenComments) {
+      console.log("comments are hiding")
       document.getElementById('sections').style.display = 'none'
     }
     else {
+      console.log("comments are showing")
       document.getElementById('sections').style.display = 'block'
     }
   });

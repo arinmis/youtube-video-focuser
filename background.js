@@ -10,5 +10,4 @@ chrome.runtime.onInstalled.addListener(() => {
   // logout defult values
   console.log(`isHiddenComments: ${isHiddenComments}`);
   console.log(`isHiddenRecomVideos: ${isHiddenRecomVideos}`);
-
 });

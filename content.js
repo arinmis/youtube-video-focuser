@@ -1,11 +1,12 @@
-// wait 5 second for page load
-const wait = 5000
-window.setTimeout(() => {
-  console.log(`\n\n\n page is cleared after ${wait} ms\n\n\n`);
-
-  hideRecomVideos()
-  hideComments()
-}, wait);
+/* url changes without page loading */
+// store dwurl on load
+let currentPage = location.href;
+// listen for changes
+setInterval(() => {
+    // do your thing..
+    hideRecomVideos()
+    hideComments()
+}, 500);
 
 
 /* hide recommendation element of youtube
@@ -15,7 +16,6 @@ window.setTimeout(() => {
 function hideRecomVideos() {
   chrome.storage.sync.get("isHiddenRecomVideos", ({ isHiddenRecomVideos }) => {
     // block recommendations
-    console.log("isHiddenRecomVideos: " + isHiddenRecomVideos);
     if (isHiddenRecomVideos) {
       document.getElementById('secondary-inner').style.display = 'none'
     }
@@ -35,7 +35,6 @@ function hideRecomVideos() {
 function hideComments() {
   chrome.storage.sync.get("isHiddenComments", ({ isHiddenComments }) => {
     // block recommendations
-    console.log("isHiddenComments: " + isHiddenComments);
     if (isHiddenComments) {
       document.getElementById('sections').style.display = 'none'
     }

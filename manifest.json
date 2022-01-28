@@ -1,7 +1,7 @@
 {
     "name": "YouTube Video Focuser",
     "description": "Removes the comments and recommendation sections from YouTube videos.",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 3,
     "background": {
         "service_worker": "background.js"

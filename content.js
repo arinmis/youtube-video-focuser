@@ -1,9 +1,11 @@
-window.onload = function() {
-  console.log("\n\n\n page is loaded \n\n\n");
+// wait 5 second for page load
+const wait = 5000
+window.setTimeout(() => {
+  console.log(`\n\n\n page is cleared after ${wait} ms\n\n\n`);
 
   hideRecomVideos()
   hideComments()
-}
+}, wait);
 
 
 /* hide recommendation element of youtube

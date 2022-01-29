@@ -20,7 +20,7 @@ Nowadays YouTube became one of the biggest information source on the internet bu
 ##### Via Google Web Store
   - [Google Web Store Link](https://chrome.google.com/webstore/detail/youtube-video-focuser/cfjonndbmheokpmjplolmdcokddoedfm?hl=en&authuser=0)
 ##### From locally
-1. Clone this repo: ```git clone git@github.com:Arinmis/youtube-video-focuser.git ```
+1. Clone this repo: ```https://github.com/Arinmis/youtube-video-focuser.git ```
 2. Open your Google Chrome browser and go to: ```chrome://extensions/```
 3. Activate Developer mode(with clicking toggle bar in the right most corner)
 4. Click 'Load unpacked' button

@@ -26,3 +26,6 @@ Nowadays YouTube became one of the biggest information source on the internet bu
 4. Click 'Load unpacked' button
 5. Select the repo that is cloned in the first step  
 [see this tutorial video](https://www.youtube.com/watch?v=oswjtLwCUqg&ab_channel=SukeshK)
+
+##### To Do
+- Hide endscreen recommendations

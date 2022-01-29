@@ -30,3 +30,4 @@ Nowadays YouTube became one of the biggest information source on the internet bu
 ##### To Do
 - Hide endscreen recommendations
 ``` document.querySelector(".html5-endscreen").style.display = "none"; ```
+``` document.querySelectorAll(".ytp-ce-element "); ```

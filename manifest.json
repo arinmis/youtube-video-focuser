@@ -4,11 +4,11 @@
     "version": "1.2",
     "manifest_version": 3,
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "background/background.js"
     },
     "permissions": ["storage", "activeTab", "scripting"],
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "popup/popup.html",
         "default_icon": {
             "32": "/images/icon-32.png",
             "64": "/images/icon-64.png",
@@ -23,7 +23,7 @@
     "content_scripts": [
         {
             "matches": ["https://www.youtube.com/*"],
-            "js": ["content.js"],
+            "js": ["content/content.js"],
             "run_at": "document_start"
         }
     ]

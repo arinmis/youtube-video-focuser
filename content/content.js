@@ -6,21 +6,19 @@ setInterval(() => {
   // run only in vidoes section
   if (!window.location.href.includes("youtube.com/watch"))
     return
-  console.log("YouTube Video Focuser settings are applying");
   // try to remove related section 
   try {
     hideRecomVideos()
   }
   catch (e) {
-    console.log("YouTube Video Focuser waiting for page loading")
+    console.log(e)
   }
 
   try {
-    console.log('here');
     hideComments()
   }
   catch (e) {
-    console.log("YouTube Video Focuser waiting for page loading")
+    console.log(e)
   }
 }, freq);
 

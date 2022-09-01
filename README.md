@@ -1,5 +1,5 @@
 # Try it now!!!
-  - [Available on Google Web Store](https://chrome.google.com/webstore/detail/youtube-video-focuser/cfjonndbmheokpmjplolmdcokddoedfm?hl=en&authuser=0)
+  [Available on Google Web Store](https://chrome.google.com/webstore/detail/youtube-video-focuser/cfjonndbmheokpmjplolmdcokddoedfm?hl=en&authuser=0)
 
 ## About extension
 Nowadays YouTube became one of the biggest information source on the internet but at the same time one of the biggest distraction source. This extension allow you to just focus video content and ban the comments and recommendation sections. By this way, you can directly get what you want from the YouTube instead of dealing with distracting comments and click-bait recommendations.

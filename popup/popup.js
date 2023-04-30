@@ -34,7 +34,7 @@ homeFeed.addEventListener("change", async () => {
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: hideComments,
+    function: hideHomeFeed,
   });
 });
 
@@ -44,7 +44,7 @@ comments.addEventListener("change", async () => {
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: hideHomeFeed,
+    function: hideComments,
   });
 });
 
@@ -100,7 +100,7 @@ function hideComments() {
 /*
  * hide home feed
  */
-function hideComments() {
+function hideHomeFeed() {
   chrome.storage.sync.get("isHiddenHomeFeed", ({ isHiddenHomeFeed }) => {
     // change hide status
     isHiddenHomeFeed = !isHiddenHomeFeed;
